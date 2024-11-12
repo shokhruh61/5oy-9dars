@@ -19,7 +19,7 @@ function validate(input) {
 function createCard(data) {
   return `<div class="list">
           <p>${data.name}</p>
-          <span>delete</span>
+          <span class="delete-button">delete</span>
         </div>`;
 }
 
@@ -65,3 +65,20 @@ buttonClear &&
       localStorage.removeItem('storage');
     }
   });
+
+blockItem.addEventListener("click", function (event) {
+  if (event.target.classList.contains("delete-button")) {
+    const taskElement = event.target.parentElement;
+    const taskId = taskElement.getAttribute("data-id");
+
+    let confirmDelete = confirm("Rostan ham o'chirmoqchimisiz?");
+    if (confirmDelete) {
+      let storage = getStorage();
+      storage = storage.filter((toDo) => toDo.id !== parseInt(taskId));
+      localStorage.setItem("todos", JSON.stringify(storage));
+
+      // Remove task from UI
+      taskElement.remove();
+    }
+  }
+});
