@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: aqua;
+  width: 400px;
+
+  margin: 50px auto;
+}
+.big-block {
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  border-radius: 2px 25px 2px 25px;
+  background-color: greenyellow;
+  box-shadow: 3px 7px 7px #708090;
+}
+#block {
+  text-align: center;
+}
+#block h1 {
+  margin-bottom: 7px;
+  margin-top: 5px;
+  color: #4b0082;
+}
+#block #button-clear {
+  padding: 5px 8px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  background-color: black;
+  color: #daa520;
+}
+#block #button-clear:hover {
+  background-color: white;
+  color: black;
+}
+#form {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#input {
+  border-radius: 0px 15px;
+  border: none;
+  padding: 12px 7px;
+  width: 80%;
+  background-color: #dcdcdc;
+}
+#buttonAdd {
+  cursor: pointer;
+  border: none;
+  background-color: #dcdcdc;
+  padding: 0px 15px;
+  border-radius: 0px 15px;
+  transition: all 0.5s ease;
+}
+#buttonAdd:hover {
+  background-color: orangered;
+  color: white;
+}
+.block-item {
+  flex-direction: column;
+}
+.list {
+  box-shadow: 4px 4px 2px gray;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #daa520;
+  border: none;
+  border-radius: 1px 15px;
+}
+.list p {
+  color: black;
+}
+.list span {
+  border-radius: 0px 10px;
+  background-color: white;
+  padding: 5px 7px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  color: black;
+}
+.list span:hover {
+  border-radius: 10px 0px;
+  color: white;
+  background-color: black;
+}
